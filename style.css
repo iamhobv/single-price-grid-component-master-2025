@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --BrightYellow: hsl(71, 73%, 54%);
+  --LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", serif;
+  line-height: 25px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--LightGray);
+}
+
+.contain {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: 2px solid red; */
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px var(--GrayishBlue);
+}
+.row1 {
+  padding: 3em;
+  background-color: white;
+  height: 50%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  /* border:2px solid green; */
+}
+.row1 h2 {
+  color: var(--Cyan);
+  margin-bottom: 1em;
+}
+.row1 h4 {
+  color: var(--BrightYellow);
+  margin-bottom: 1em;
+}
+.row1 p {
+  color: var(--GrayishBlue);
+}
+
+.row2 {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.col2,
+.col1 {
+  padding: 3em;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.col1 {
+  background-color: var(--Cyan);
+
+  border-bottom-left-radius: 10px;
+}
+.col2 {
+  background-color: hsl(179, 61%, 49%);
+  border-bottom-right-radius: 10px;
+}
+.col1 h3 {
+  margin-bottom: 1em;
+}
+.col1 h1 {
+  font-size: 40px;
+  display: inline-block;
+}
+.price {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+.price span {
+  color: var(--LightGray);
+}
+button {
+  margin-top: 1em;
+  padding: 1.5em;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  background-color: var(--BrightYellow);
+  border: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.col2 h3 {
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 850px) {
+  .row2 {
+    display: flex;
+    flex-direction: column;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .col2,
+  .col1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .col1 {
+    border-radius: 0;
+  }
+  .col2 {
+    border-bottom-left-radius: 10px;
+  }
+  .contain {
+    position: static;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    margin: 2em;
+  }
+}
