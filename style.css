@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: var(--LightGray);
 }
 
@@ -127,9 +127,9 @@ button {
     border-bottom-left-radius: 10px;
   }
   .contain {
-    position: static;
-    top: 0%;
-    left: 0%;
+    position: unset;
+    /* top: 0%; */
+    /* left: 0%; */
     transform: translate(0%, 0%);
     margin: 2em;
   }
